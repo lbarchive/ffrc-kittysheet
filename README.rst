@@ -5,6 +5,13 @@ This is a project for quickly finding out the kittens' names of FFRC_ (Friends o
 
 .. _FFRC: http://fofrescue.org/
 
+Cheatsheet
+==========
+
+Go to here_.
+
+.. _here: http://livibetter.github.com/ffrc-kittysheet/
+
 License
 =======
 
