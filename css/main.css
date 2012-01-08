@@ -1,0 +1,62 @@
+body {
+  font-family: Acme;
+}
+
+a {
+  text-decoration: none;
+}
+
+#notice {
+  background-color: pink;  
+  border-radius: 0.5em;
+  color: #f00;
+  padding: 0.5em;
+}
+
+#datasheet {
+  width: 100%;
+  height: 100px;
+}
+
+#results {
+  margin-top: 1em;  
+}
+
+#results .kitty {
+  border: 2px solid #486088;
+  margin-bottom: 1em;
+  padding: 3px 3px 6px 3px;
+}
+
+.kitty .name {
+  font-size: 2em;  
+}
+
+.kitty .tag {
+  color: #f2cf87;
+  background-color: #486088;
+  border: 2px solid #f2cf87;
+  border-radius: 6px;
+  padding: 2px;
+  margin: 1px;
+}
+
+.kitty .links {
+  margin-top: 0.5em;
+}
+
+.links a {
+  margin-right: 0.5em;
+}
+
+.links a.petfinder {
+  color: #6735cc;
+}
+
+.links a.flickr {
+  color: #0063dc;
+}
+
+#footer {
+  margin-top: 1em;
+}
