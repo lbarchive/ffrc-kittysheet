@@ -1,4 +1,6 @@
 body {
+  background-color: #5F9EA0;
+  color: #EDBD63;
   font-family: Acme;
 }
 
@@ -30,6 +32,12 @@ a {
 
 .kitty .name {
   font-size: 2em;  
+  text-shadow: 1px 1px 0 #A0615E;
+}
+
+.kitty .tags {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .kitty .tag {

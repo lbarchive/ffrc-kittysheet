@@ -183,4 +183,22 @@ function reset_data(){
 }
 
 
+$(function(){
+  var $ds_ctl = $('#ds-control')
+    .css('cursor', 'pointer')
+    .click(function(){
+      var $this = $(this);
+      var $ds_area = $('#ds-area');
+      if ($this.text() == '+') {
+        $this.text('-');
+        $ds_area.slideDown();
+      } else {
+        $this.text('+');
+        $ds_area.slideUp();
+      }
+    })
+    ;
+  var $ds_area = $('#ds-area').slideUp();
+
+});
 $(reset_data);

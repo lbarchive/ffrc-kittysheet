@@ -13,9 +13,9 @@
 <body>
 <h1>Friends of Felines' Rescue Center Kitty Cheatsheet</h1>
 
-<div id="notice">This is made by a cammer for finding the cuties' names, please do not use this as reference. You can find official information on <a href="http://fofrescue.org/">FFRC website</a>. If you want to add or to correct any information, free feel to contact.</div>
+<div id="notice">This is made by a cammer for finding the cuties' names, please do not use this as formal reference. You can find official information on <a href="http://fofrescue.org/">FFRC website</a>. If you want to add or to correct any information, free feel to contact.</div>
 
-<h2>Meowing</h2>
+<h2>Meowing filter</h2>
 <div id='controls'></div>
 <p>E.g. black, orange, ragdoll, etc.</p>
 
@@ -23,9 +23,10 @@
 <div id="results">
 </div>
 
-<h2>Kitties' secrets</h2>
-<div>
-<textarea id="datasheet">
+<h2>Kitties' secrets <span id="ds-control">+</span></h2>
+<div id="ds-area">
+  <div>
+  <textarea id="datasheet">
 Ada Jane
  t resident
  f http://www.flickr.com/search/?w=73221929%40N03&amp;q=ada+jane&amp;m=text
@@ -275,10 +276,11 @@ Zelda
  p http://www.petfinder.com/petdetail/20701065
  f http://www.flickr.com/search/?w=73221929%40N03&amp;q=zelda&amp;m=text
 </textarea>
-</div>
-<div>
-<div>t - Tag &bull; p - Petfinder &bull; f - Flickr</div>
-<button onclick='reset_data()'>Reload</button>
+  </div>
+  <div>
+    <button onclick='reset_data()'>Reload</button>
+    <span>t - Tag &bull; p - Petfinder &bull; f - Flickr</span>
+  </div>
 </div>
 
 <div id="footer">
