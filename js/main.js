@@ -20,6 +20,9 @@ function parse_datasheet() {
       type = line[0];
       value = line.substring(2);
       switch (line[0]) {
+        case 'a':
+          kitty['avatar'] = value;
+          break;
         case 't':
           var tags = kitty['tags'];
           if (!$.isArray(tags))
@@ -109,7 +112,25 @@ function generate_results(names) {
   var $results = $('#results').empty();
   $.each(names, function(idx, name){
     var $kitty = $('<div/>').addClass('kitty');
-    
+
+    var $avatar = $('<div/>').addClass('avatar');
+    if (kitties[name]['avatar']) {
+      $(kitties[name]['avatar']).appendTo($avatar);
+    } else {
+      $('<span/>')
+        .addClass('no-avatar')
+        .text('=^.^=')
+        .appendTo($avatar)
+        ;
+    }
+    $avatar.appendTo($kitty);
+
+    var $name = $('<div/>')
+      .addClass('name')
+      .text(name)
+      ;
+    $name.appendTo($kitty);
+
     var $tags = $('<div/>').addClass('tags');
     tags = kitties[name]['tags'];
     $.each(tags, function(idx, tag){
@@ -118,10 +139,6 @@ function generate_results(names) {
         .text(tag)
         .appendTo($tags);
     });
-    $('<div/>')
-      .addClass('name')
-      .text(name)
-      .appendTo($kitty);
     $tags.appendTo($kitty);
 
     var $links = $('<div/>').addClass('links');
@@ -149,6 +166,7 @@ function generate_results(names) {
       }
       });
     $links.appendTo($kitty);
+    $('<div/>').addClass('clear').appendTo($kitty);
 
     $kitty.appendTo($results);
   });

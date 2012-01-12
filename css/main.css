@@ -30,6 +30,22 @@ a {
   padding: 3px 3px 6px 3px;
 }
 
+#results .clear {
+  clear: both;
+}
+
+.kitty .avatar {
+  width: 240px;
+  text-align: center;
+  margin-right: 3px;
+  float: left;  
+}
+
+.kitty .avatar span.no-avatar {
+  font-family: Arial;
+  font-size: 72px;
+}
+
 .kitty .name {
   font-size: 2em;  
   text-shadow: 1px 1px 0 #A0615E;
