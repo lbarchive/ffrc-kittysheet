@@ -14,6 +14,14 @@ function parse_datasheet() {
     if (line[0] != ' ') {
       // name line
       kitties[line] = kitty = {};
+      // add official links
+      kitties[line]['links'] =
+        [
+          {
+            type: 'f',
+            value: "http://www.flickr.com/search/?w=72892197@N03&q=" + line.replace(/ /g, '+')
+          }
+        ];
     } else {
       // data line
       line = $.trim(line);
@@ -33,8 +41,8 @@ function parse_datasheet() {
         case 'f':
           var links = kitty['links'];
           if (!$.isArray(links))
-            kitty['links'] = tags = [];
-          tags.push({type: line[0], value: value});
+            kitty['links'] = links = [];
+          links.push({type: line[0], value: value});
           break;
       }
     }
